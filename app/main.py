@@ -15,7 +15,6 @@ class Person:
 def create_person_list(people: List[dict]) -> List[Person]:
 
     [Person(person["name"], person["age"]) for person in people]
-
     for pers in people:
         if "wife" in pers and pers["wife"] is not None:
             Person.people[pers["name"]].wife =\
