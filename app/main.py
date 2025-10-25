@@ -3,13 +3,12 @@ from typing import Dict, List
 
 
 class Person:
+    people: Dict[str, "Person"] = {}
 
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         Person.people[name] = self
-
-    people: Dict[str, Person] = {}
 
 
 def create_person_list(people: List[dict]) -> List[Person]:
