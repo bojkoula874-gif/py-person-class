@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 
 class Person:
@@ -18,7 +18,7 @@ class Person:
 
 def create_person_list(people_data: List[dict]) -> List[Person]:
 
-    [Person(person['name'], person['age']) for person in people_data]
+    [Person(person["name"], person["age"]) for person in people_data]
 
     for human in people_data:
         person = Person.people[human["name"]]
